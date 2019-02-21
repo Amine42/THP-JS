@@ -7,7 +7,41 @@ let value = ["$6558.07", "$468.95", "$0.487526", "$762.84", "$8.86", "$85.26", "
  "$0.042993", "$0.000325", "$0.000271", "$0.002799", "$0.071591", "$1.17", "$0.001171", "$0.000651", "$0.000195", "$0.001562", "$0.008721", "$0.000065", "$0.000130", "$0.002473", "$0.000065", "$0.000325", "$0.656235", "$0.000254", "$0.000518", "$0.000065", "$0.054733", "$9.85", "$0.000520", "$0.000259", "$0.003288", "$0.006578", "$0.004273", "$0.024932", "$0.011394"];
 
 let crypto = {};
-
 name.forEach((key, i) => crypto[key] = parseFloat(value[i].replace("$", "")));
 
-console.log(crypto);
+function get_max_value(crypto) {
+    let tab = Object.values(crypto);
+    return Math.max.apply(null, tab);
+}
+
+function get_min_value(crypto) {
+    let tab = Object.values(crypto);
+    return Math.min.apply(null, tab);
+}
+
+function get_name_max_value(crypto) {
+    let max = get_max_value(crypto);
+    let res = ""
+    Object.entries(crypto).forEach(
+        ([key, value]) => max == value ? res += key + " " : key += ""
+    );
+    
+    return res
+}
+
+function get_name_min_value(crypto) {
+    let min = get_min_value(crypto);
+    let res = ""
+    Object.entries(crypto).forEach(
+        ([key, value]) => min == value ? res += key + " " : key += ""
+    );
+    
+    return res
+}
+
+function get_number_of_coin_in_name(crypto) {
+    
+}
+
+console.log("les cryptos qui ont la plus grosse valeur sont:", get_name_max_value(crypto));
+console.log("les cryptos qui ont la plus petite valeur sont:", get_name_min_value(crypto));

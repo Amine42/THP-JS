@@ -55,9 +55,21 @@ function min_rented_book(books) {
         }
         i++;
     }
-
-    console.log("le livre qui a ete le moin de fois pris a ete pris", min, "fois", "le titre du livre est:", name)
+        console.log("le livre qui a ete le moin de fois pris a ete pris", min, "fois", "le titre du livre est:", name)
 }
+
+books.forEach(book =>{
+	if(book.id === 873495){
+		 console.log(`Le livre avec l'ID 873495 se nomme : "${book.title}"`);
+		}
+	});
+
+
+let index = books.findIndex(book => book.id === 133712);
+books.splice(index,1);
+console.log("Le livre a été supprimé ");
+console.log(books);
+
 
 
 max_rented_book(books);

@@ -32,3 +32,9 @@ books.forEach(book =>{
 		 console.log(`Le livre avec l'ID 873495 se nomme : "${book.title}"`);
 		}
 	});
+
+
+let index = books.findIndex(book => book.id === 133712);
+books.splice(index,1);
+console.log("Le livre a été supprimé ");
+console.log(books);

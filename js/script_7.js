@@ -18,7 +18,7 @@ books.forEach(book => {
 if (booksread == true) {
   console.log("C'est bon :) ");
 } else {
-  console.log(" Ah tu nas pas tout lu !!!!");
+  console.log(" Ah tu n'as pas tout lu !!!!");
 }
 
 

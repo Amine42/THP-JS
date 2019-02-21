@@ -52,6 +52,7 @@ function age_of_boss_today(boss) {
 }
 
 
+
 seventy(entrepreneurs);
 first_name_and_last_name_in_tab(entrepreneurs);
 console.log(first_name_and_last_name);

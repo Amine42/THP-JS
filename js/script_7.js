@@ -39,7 +39,6 @@ function max_rented_book(books) {
         }
         i++;
     }
-
     console.log("le livre qui a ete le plus de fois pris a ete pris", max, "fois", "le titre du livre est:", name)
 }
 
@@ -55,7 +54,7 @@ function min_rented_book(books) {
         }
         i++;
     }
-        console.log("le livre qui a ete le moin de fois pris a ete pris", min, "fois", "le titre du livre est:", name)
+    console.log("le livre qui a ete le moin de fois pris a ete pris", min, "fois", "le titre du livre est:", name)
 }
 
 books.forEach(book =>{
@@ -71,6 +70,11 @@ console.log("Le livre a été supprimé ");
 console.log(books);
 
 
+function sort_tab(books) {
+    return books.sort((a, b) => a.title.localeCompare(b.title));
+}
+
 
 max_rented_book(books);
 min_rented_book(books);
+console.log(sort_tab(books));

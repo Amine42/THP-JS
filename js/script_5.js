@@ -49,6 +49,22 @@ function get_number_of_coin_in_name(crypto) {
     return res;
 }
 
+function less_than_six_thousand(crypto) {
+    let nb = 0;
+
+    console.log("les cryptos dont le cours est inferieur a 6000 sont:");
+    Object.entries(crypto).forEach(function([key, value]) {
+        if (value < 6000) {
+            nb++;
+            console.log(key);
+        }
+        // value <= 6000 ? res += key + " " : res += ""
+    });
+    
+    return nb;
+}
+
 console.log("les cryptos qui ont la plus grosse valeur sont:", get_name_max_value(crypto));
 console.log("les cryptos qui ont la plus petite valeur sont:", get_name_min_value(crypto));
 console.log("il y a:", get_number_of_coin_in_name(crypto), "cryptos qui possedent \"coin\" dans leurs nom");
+console.log("Ils sont au nombre de:", less_than_six_thousand(crypto));

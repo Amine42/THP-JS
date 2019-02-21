@@ -8,6 +8,6 @@ let value = ["$6558.07", "$468.95", "$0.487526", "$762.84", "$8.86", "$85.26", "
 
 let crypto = {};
 
-name.forEach((key, i) => crypto[key] = value[i]);
+name.forEach((key, i) => crypto[key] = parseFloat(value[i].replace("$", "")));
 
 console.log(crypto);

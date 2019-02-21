@@ -70,7 +70,11 @@ function count_underscore(tab) {
 }
 
 function sort_tab(tab) {
-    return tab.sort()
+    return tab.sort(Intl.Collator().compare)
+}
+
+function sort_tab_strlen(tab) {
+    return tab.sort((a, b) => a.length - b.length);
 }
 
 // count_journalist(tab);
@@ -81,3 +85,4 @@ console.log("dans ce tableau il y a", count_first_char_maj(tab), "pseudo qui com
 console.log("dans ce tableau il y a", count_maj(tab), "pseudo qui possedent une lettre majuscule");
 console.log("dans ce tableau il y a", count_underscore(tab), "underscore");
 console.log("voici le tableau dans l'ordre alphabetic\n", sort_tab(tab));
+console.log("voici les 50 pseudo les plus cours du tableau\n", sort_tab_strlen(tab).slice(0,50));

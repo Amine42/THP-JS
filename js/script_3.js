@@ -10,17 +10,17 @@ function pyramide(nb) {
         j = 0;
         while (j < nb) {
             if (j < nb - i)
-                res += " "
+                res += " ";
             else
-                res += "#"
-            j++
+                res += "#";
+            j++;
         }
         res += "\n";
         i++;
     }
-    return res
+    return res;
 }
 
-let res = pyramide(nb)
+let res = pyramide(nb);
 
 console.log(res);

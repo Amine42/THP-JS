@@ -13,21 +13,35 @@ const entrepreneurs = [
     { first: 'Peter', last: 'Thiel', year: 1967 }
   ];
 
+  var first_name_and_last_name = [];
+
 function seventy(boss) {
     let i = 0;
     let tab = [];
 
+    console.log("les entrepreneurs nee dans les annees 70 sont: ")
     while (i < boss.length) {
         Object.entries(boss[i]).forEach(function([key, value]) {
             if (key == "year" && (value <= 1979 && value >= 1970)) {
-                console.log(boss[i].first);
+                console.log(boss[i].first, " ", boss[i].last);
                 tab.push(boss[i].first + " " + boss[i].last);
             }
         });
     i++;
     }
-    console.log(tab)
-    return name;
+
+    return tab;
+}
+
+function first_name_and_last_name_in_tab(boss) {
+    let i = 0;
+    
+    while (i < boss.length) {
+        first_name_and_last_name.push(boss[i].first + " " + boss[i].last)
+        i++;
+    }
 }
 
 seventy(entrepreneurs);
+first_name_and_last_name_in_tab(entrepreneurs);
+console.log(first_name_and_last_name);

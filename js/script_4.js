@@ -70,11 +70,24 @@ function count_underscore(tab) {
 }
 
 function sort_tab(tab) {
-    return tab.sort(Intl.Collator().compare)
+    let arr = tab.slice();
+    return arr.sort(Intl.Collator().compare)
 }
 
 function sort_tab_strlen(tab) {
-    return tab.sort((a, b) => a.length - b.length);
+    let arr = tab.slice();
+    return arr.sort((a, b) => a.length - b.length);
+}
+
+function where_is_epenser(tab) {
+    let i = 0;
+
+    while (i < tab.length) {
+        if (tab[i].match(/@epenser/) != null)
+            return i;
+        i++;
+    }
+    return null;
 }
 
 // count_journalist(tab);
@@ -86,3 +99,4 @@ console.log("dans ce tableau il y a", count_maj(tab), "pseudo qui possedent une 
 console.log("dans ce tableau il y a", count_underscore(tab), "underscore");
 console.log("voici le tableau dans l'ordre alphabetic\n", sort_tab(tab));
 console.log("voici les 50 pseudo les plus cours du tableau\n", sort_tab_strlen(tab).slice(0,50));
+console.log("dans ce tableau epenser est al'index:", where_is_epenser(tab));

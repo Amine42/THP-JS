@@ -42,6 +42,17 @@ function first_name_and_last_name_in_tab(boss) {
     }
 }
 
+function age_of_boss_today(boss) {
+    let i = 0;
+    
+    while (i < boss.length) {
+        console.log("Aujourd'hui", boss[i].first, boss[i].last, "as", 2019 - boss[i].year, "ans")
+        i++;
+    }
+}
+
+
 seventy(entrepreneurs);
 first_name_and_last_name_in_tab(entrepreneurs);
 console.log(first_name_and_last_name);
+age_of_boss_today(entrepreneurs);

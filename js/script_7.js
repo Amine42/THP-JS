@@ -16,7 +16,7 @@ books.forEach(book => {
 });
 
 if (booksread == true) {
-    console.log("C'est bon :) ");
+    console.log("tout les livres ont ete lus au moin une fois");
 } else {
     console.log(" Ah tu n'as pas tout lu !!!!");
 }
@@ -45,7 +45,7 @@ function max_rented_book(books) {
 function min_rented_book(books) {
     let i = 0;
     let min = books[0].rented;
-    let name = ""
+    let name = books[0].title;
 
     while (i < books.length) {
         if (books[i].rented < min) {
@@ -56,13 +56,6 @@ function min_rented_book(books) {
     }
     console.log("le livre qui a ete le moin de fois pris a ete pris", min, "fois", "le titre du livre est:", name)
 }
-
-books.forEach(book =>{
-	if(book.id === 873495){
-		 console.log(`Le livre avec l'ID 873495 se nomme : "${book.title}"`);
-		}
-	});
-
 
 let index = books.findIndex(book => book.id === 133712);
 books.splice(index,1);

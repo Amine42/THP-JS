@@ -21,27 +21,34 @@ function get_min_value(crypto) {
 
 function get_name_max_value(crypto) {
     let max = get_max_value(crypto);
-    let res = ""
+    let res = "";
     Object.entries(crypto).forEach(
         ([key, value]) => max == value ? res += key + " " : key += ""
     );
     
-    return res
+    return res;
 }
 
 function get_name_min_value(crypto) {
     let min = get_min_value(crypto);
-    let res = ""
+    let res = "";
     Object.entries(crypto).forEach(
-        ([key, value]) => min == value ? res += key + " " : key += ""
+        ([key, value]) => min == value ? res += key + " " : res += ""
+    );
+    
+    return res;
+}
+
+function get_number_of_coin_in_name(crypto) {
+    let res = 0;
+
+    Object.entries(crypto).forEach(
+        ([key, value]) => key.match(/coin/i) != null ? res++ : res += 0
     );
     
     return res
 }
 
-function get_number_of_coin_in_name(crypto) {
-    
-}
-
 console.log("les cryptos qui ont la plus grosse valeur sont:", get_name_max_value(crypto));
 console.log("les cryptos qui ont la plus petite valeur sont:", get_name_min_value(crypto));
+console.log("il y a:", get_number_of_coin_in_name(crypto), "cryptos qui possedent \"coin\" dans leurs nom");

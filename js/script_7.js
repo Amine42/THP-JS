@@ -20,3 +20,15 @@ if (booksread == true) {
 } else {
   console.log(" Ah tu nas pas tout lu !!!!");
 }
+
+
+
+
+
+
+
+books.forEach(book =>{
+	if(book.id === 873495){
+		 console.log(`Le livre avec l'ID 873495 se nomme : "${book.title}"`);
+		}
+	});

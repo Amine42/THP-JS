@@ -55,10 +55,9 @@ function less_than_six_thousand(crypto) {
     console.log("les cryptos dont le cours est inferieur a 6000 sont:");
     Object.entries(crypto).forEach(function([key, value]) {
         if (value < 6000) {
-            nb++;
             console.log(key);
+            nb++;
         }
-        // value <= 6000 ? res += key + " " : res += ""
     });
     
     return nb;

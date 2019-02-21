@@ -46,7 +46,7 @@ function get_number_of_coin_in_name(crypto) {
         ([key, value]) => key.match(/coin/i) != null ? res++ : res += 0
     );
     
-    return res
+    return res;
 }
 
 console.log("les cryptos qui ont la plus grosse valeur sont:", get_name_max_value(crypto));

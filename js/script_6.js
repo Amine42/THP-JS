@@ -51,9 +51,12 @@ function age_of_boss_today(boss) {
     }
 }
 
-
+function sort_tab(entrepreneurs) {
+    return entrepreneurs.sort((a, b) => a.last.localeCompare(b.last));
+}
 
 seventy(entrepreneurs);
 first_name_and_last_name_in_tab(entrepreneurs);
 console.log(first_name_and_last_name);
 age_of_boss_today(entrepreneurs);
+console.log("voici la liste des entrepreneurs dans l'ordre alphabetique\n", sort_tab(entrepreneurs));

@@ -1,6 +1,9 @@
 # THP-JS
 
+Exercices d'introduction a javascript de THP.
+
 ## contributors
+
 [Lorenzo Chahid](https://github.com/modeuil) slack pseudo: `@Lorenzo chahid`
 
 [Malik Ahres](https://github.com/Malik42) slack pseudo: `@Malik Ahres`

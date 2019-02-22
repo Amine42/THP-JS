@@ -1,6 +1,6 @@
 # THP-JS
 
-Exercices d'introduction a javascript de THP.
+Exercices d'introduction à javascript de THP.
 
 Tu pourras retrouver un fichier html (index.html ;) ) dans lequelle tu pourras,
 

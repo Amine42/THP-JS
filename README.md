@@ -2,6 +2,13 @@
 
 Exercices d'introduction a javascript de THP.
 
+Tu pourras retrouver un fichier html (index.html ;) ) dans lequelle tu pourras,
+
+depuis ton navigateur vérifier les exercices ! (F12, puis console)
+
+Bonne correction à toi ! 
+
+
 ## contributors
 
 [Lorenzo Chahid](https://github.com/modeuil) slack pseudo: `@Lorenzo chahid`
